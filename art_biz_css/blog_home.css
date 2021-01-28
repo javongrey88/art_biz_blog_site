@@ -3,6 +3,11 @@
     display: grid;
     grid-template-rows: 200px 300px 300px;
     grid-template-columns: 350px;
+    grid-template-areas: 
+    "nv"
+    "pt"
+    "cd"
+    ;
 }
 
 /* contains the style rules for the:
@@ -14,6 +19,7 @@
     .nav{
         display: flex;
         flex-direction: column;
+        grid-area: 'nv';
     }
 
     
@@ -46,6 +52,7 @@
         background-image: url('blog_pics/blog-site-post-card.jpg');
         font-family: serif;
         background-size: 350px 350px;
+        grid-area: 'pt';
     }
 
     .quote{
@@ -53,6 +60,50 @@
         color: white;
         font-size: 2rem;
     }
+
+    .cards{
+        display: grid;
+        grid-template-rows: 400px ;
+        grid-template-columns: 350px;
+        grid-area: 'cd';
+        margin-top: 50px;
+
+    }
+
+    .card{
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    .card-img{
+        width: 350px;
+        height: 250px;
+    }
+
+
+    .blog-info{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .author-link{
+        display: flex;
+        flex-direction: row;
+        
+    }
+
+    .author-link p{
+        padding-left: 5px;
+       
+    }
+
+  
+    .author-pic{
+        width: 40px;
+        height: 40px;
+    }
+
 }
 /* .nav{
     display: flex;
