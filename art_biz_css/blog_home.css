@@ -1,14 +1,14 @@
 /* contains all of the home page content with in a div */
-.main-container{
+/* .main-container{
     display: grid;
     grid-template-rows: 200px 300px 300px;
     grid-template-columns: 350px;
     grid-template-areas: 
-    "nv"
-    "pt"
-    "cd"
+    "nv nv "
+    "pt pt "
+    "cd cd "
     ;
-}
+} */
 
 /* contains the style rules for the:
 * Logo//home page link
@@ -16,6 +16,16 @@
 * contact page link
 */
 @media(min-width: 300px){
+    .main-container{
+        display: grid;
+        grid-template-rows: 200px 300px 300px;
+        grid-template-columns: 350px;
+        grid-template-areas: 
+        "nv "
+        "pt pt pt"
+        "cd "
+        ;
+    }
     .nav{
         display: flex;
         flex-direction: column;
@@ -47,10 +57,6 @@
         font-size: 1.25rem;
         font-family: Helvetica, Arial, sans-serif;
     }
-
-    .nav-link:hover {
-        color: royalblue;
-    }
     
     .post-card{
         margin: 0;
@@ -79,6 +85,131 @@
         display: flex;
         flex-direction: column;
         margin-bottom: 20px;
+        
+    }
+
+    .card-img{
+        width: 350px;
+        height: 250px;
+    }
+
+    .blog-link{
+        text-decoration: none;
+        font-family: Helvetica, Arial, sans-serif;
+    }
+
+
+
+    .blog-info{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .author-link{
+        display: flex;
+        flex-direction: row;
+        text-decoration: none;
+        
+    }
+
+    .author-link p{
+        padding-left: 5px;
+       
+    }
+
+  
+    .author-pic{
+        width: 40px;
+        height: 40px;
+    }
+
+}
+
+@media(min-width: 600px){
+    .main-container{
+        display: grid;
+        grid-template-rows: 200px 200px 200px;
+        grid-template-columns: 800px;
+        grid-template-areas: 
+        "nv"
+        "pt"
+        "cd"
+        ;
+    }
+    .nav{
+        display: flex;
+        flex-direction: row;
+        grid-area: 'nv';
+    }
+
+    
+    #logo{
+        width: 80px;
+        height: 80px;
+        padding: 10px;
+        
+    }
+
+    #logo:hover{
+        width: 90px;
+        height: 90px;
+        padding-left: 10;
+        transition: all 0.5s ease-in-out;
+    }
+    
+ 
+    .nav-list{
+        padding-left: 5px;
+        list-style-type: none;
+        display: inline-flex;
+        margin-left: 60%;
+    
+    }
+
+    
+    .nav-list li{
+        padding: 20px;
+    }
+    
+    .nav-link{
+        text-decoration: none;
+        font-size: 1.25rem;
+        font-family: Helvetica, Arial, sans-serif;
+    }
+
+    .nav-link:hover {
+        color: royalblue;
+    }
+    
+    .post-card{
+        margin: 0;
+        background-image: url('blog_pics/blog-site-post-card.jpg');
+        font-family: serif;
+        background-size: 350px 350px;
+    
+        grid-area: 'pt';
+    }
+
+    .quote{
+        text-align: center;
+        color: white;
+        font-size: 2rem;
+    }
+
+    .cards{
+        display: grid;
+        grid-template-columns: 380px 380px;
+      
+        grid-area: 'cd';
+        margin-top: 50px;
+
+    }
+
+    .card{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+
         
     }
 
@@ -122,6 +253,8 @@
     }
 
 }
+
+
 /* .nav{
     display: flex;
     flex-direction: column;
