@@ -128,8 +128,8 @@
 @media(min-width: 600px){
     .main-container{
         display: grid;
-        grid-template-rows: 200px 200px 200px;
-        grid-template-columns: 800px;
+        grid-template-rows: 150px 400px 200px;
+        grid-template-columns: 730px;
         grid-template-areas: 
         "nv"
         "pt"
@@ -183,9 +183,9 @@
     
     .post-card{
         margin: 0;
-        background-image: url('blog_pics/blog-site-post-card.jpg');
+        background-image: url('blog_pics/blog-site-post-card.jpg') no-repeat;
         font-family: serif;
-        background-size: 350px 350px;
+        background-size: 730px 400px;
     
         grid-area: 'pt';
     }
